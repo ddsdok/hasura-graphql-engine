@@ -4,6 +4,7 @@ ENV HASURA_GRAPHQL_CLI_ENVIRONMENT=server-on-docker
 
 # Run new version of docker-entrypoint
 ADD ./run-migrations.sh /bin/
+RUN chmod +x /bin/run-migrations.sh
 
-CMD ["run-migrations.sh", "graphql-engine", "serve"]
-
+ENTRYPOINT [ "sh", "/bin/run-migrations.sh" ]
+CMD ["graphql-engine", "serve"]
