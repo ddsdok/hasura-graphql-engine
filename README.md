@@ -22,3 +22,6 @@ $METADATA_FILE variable.
 
 After downloading each file, the script will rename then to a random
 version, enabling them to be applied as migration for hasura database.
+
+TIP: Use philippgille/serve docker image, to serve the files for
+download.
