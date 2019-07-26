@@ -51,7 +51,7 @@ if [ -z ${HASURA_GRAPHQL_MIGRATIONS_DIR+x} ]; then
 fi
 
 # download migration files and rename them
-mkdir $HASURA_GRAPHQL_MIGRATIONS_DIR
+mkdir -p $HASURA_GRAPHQL_MIGRATIONS_DIR
 if [ -z "$SCHEMA_FILE" ]; then
     log "can't find schema file to download ..."
 else
